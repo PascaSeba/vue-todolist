@@ -22,10 +22,11 @@
         <div class="input">
             <input type="text" v-model="myToDo" v-on:keyup.13="addToDo()">
             <button @click="addToDo">Aggiungi</button>
+            <button @click="returned">Torna indietro</button>
         </div>
         <div class="list">
             <ul v-if="(toDoList.length > 0)">
-                <li v-for="(toDo, index) in toDoList">{{toDo}}<span @click="deleteToDo(index)"><i class="fas fa-times"></i></li>
+                <li v-for="(toDo, index) in toDoList">{{toDo}}<i class="fas fa-times" @click="deleteToDo(index)"></i></li>
             </ul>
             <h2 v-else>Non hai nessuna attività.</h2>
         </div>

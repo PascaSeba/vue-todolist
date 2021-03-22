@@ -16,6 +16,7 @@ var app = new Vue({
         toDoList: [
             "Fare attività fisica", "Salutare il tizio urlante dei limoni", "Fare una spremuta di umani"
         ],
+        allTodos: [],
     },
     methods: {
         addToDo() {
@@ -25,9 +26,16 @@ var app = new Vue({
             }
         },
         deleteToDo(index) {
-            this.toDoList.splice(index, 1);
+            var removedTodo = this.toDoList.splice(index, 1);
             alert("Complimenti! Hai svolto un TO-DO!");
-        }
+            this.allTodos.push(removedTodo[0]);
+        },
+        returned() {
+            this.allTodos.forEach((todo) => {
+                this.toDoList.push(todo);
+            });
+            this.allTodos = [];
+        },
     }
 });
 Vue.config.devtools = true;
