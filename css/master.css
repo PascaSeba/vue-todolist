@@ -44,6 +44,7 @@ body {
     font-size: 1em;
     vertical-align: middle;
     margin: 2px;
+    cursor: pointer;
 }
 
 .input input,
@@ -51,6 +52,17 @@ body {
     outline: none;
     box-shadow: 3px 3px 3px rgb(161, 160, 160);
     border-radius: 10px;
+}
+
+.input button:hover,
+.input button:hover {
+    background-color: #d4d3d3;
+}
+
+.input button:active,
+.input button:active {
+    color: white;
+    background-color: black;
 }
 
 .list {
@@ -75,6 +87,15 @@ body {
 .list i {
     cursor: pointer;
     font-size: 1.3em;
+    text-align: center;
+}
+
+.list i:active {
+    color: #11b111;
+    background-color: #11b111;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
 }
 
 .list h2 {
