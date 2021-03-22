@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+}
+
+.head_container {
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+}
+
+.head_container img {
+    max-width: 300px;
+    padding: 10px;
+}
+
+#root {
+    width: 100%;
+}
+
+.input {
+    text-align: center;
+    margin: 50px;
+}
+
+.input input {
+    width: 22%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-color: grey;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.input button {
+    padding: 5px;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+.input input,
+.input button {
+    outline: none;
+    box-shadow: 3px 3px 3px rgb(161, 160, 160);
+    border-radius: 10px;
+}
+
+.list {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #ece9e9e0;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.list ul li {
+    padding: 5px;
+    list-style-type: none;
+    font-size: 1.3em;
+    font-style: oblique;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid lightgrey;
+    align-items: baseline;
+}
+
+.list i {
+    cursor: pointer;
+    font-size: 1.3em;
+    color: purple;
+}
+
+.list h2 {
+    text-align: center;
+    border: 3px solid lightgray;
+    padding: 5px;
+}

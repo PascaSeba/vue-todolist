@@ -19,8 +19,10 @@ var app = new Vue({
     },
     methods: {
         addToDo() {
-            this.toDoList.push(this.myToDo);
-            this.myToDo = ("");
+            if (this.myToDo != "") {
+                this.toDoList.push(this.myToDo.charAt(0).toUpperCase() + this.myToDo.slice(1).toLowerCase());
+                this.myToDo = ("");
+            }
         },
         deleteToDo(index) {
             this.toDoList.splice(index, 1);
