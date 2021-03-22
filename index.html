@@ -13,11 +13,10 @@
 
 <body>
     <div id="root">
-        <input v-model="inputext" type="text">
-        <button>Invia</button>
+        <input type="text" v-model="myToDo">
+        <button @click="addToDo">Invia</button>
         <ul>
-            <li v-for="toDo in toDoList">{{toDo}}<span><strong> X</strong></span></li>
-            <li>{{inputext}}</li>
+            <li v-for="(toDo, index) in toDoList">{{toDo}}<span @click="deleteToDo(index)"><strong> X</strong></span></li>
         </ul>
     </div>
 
